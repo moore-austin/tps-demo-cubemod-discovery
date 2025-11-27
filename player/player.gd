@@ -13,7 +13,7 @@ const MOTION_INTERPOLATE_SPEED: float = 10.0
 const ROTATION_INTERPOLATE_SPEED: float = 10.0
 
 const MIN_AIRBORNE_TIME: float = 0.1
-const JUMP_SPEED: float = 5.0
+const JUMP_SPEED: float = 7.0
 
 var airborne_time: float = 100.0
 
