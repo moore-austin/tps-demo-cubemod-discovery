@@ -28,6 +28,10 @@ window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 window/size/fullscreen=true
 
+[dotnet]
+
+project/assembly_name="Godot Third-Person Shooter Demo"
+
 [editor]
 
 import/use_multiple_threads=false

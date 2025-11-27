@@ -47,7 +47,7 @@ _subresources={
 "door_unlockedemission": {
 "use_external/enabled": true,
 "use_external/fallback_path": "res://door/model/door_unlockedemission.tres",
-"use_external/path": "res://door/model/door_unlockedemission.tres"
+"use_external/path": "uid://c6q1h8dxh631b"
 }
 }
 }
