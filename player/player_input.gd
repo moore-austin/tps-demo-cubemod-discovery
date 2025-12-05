@@ -106,7 +106,15 @@ func _process(delta: float) -> void:
 
 
 func _input(input_event: InputEvent) -> void:
-	if input_event is InputEventMouseMotion:
+	# 1. Check for your custom "free_cursor" action (Command + F)
+	if input_event.is_action_pressed("free_cursor"):
+		if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
+			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE # Free the mouse
+		else:
+			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED # Capture the mouse
+
+	# 2. Only rotate the camera if the mouse is actually CAPTURED
+	if input_event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 		var camera_speed_this_frame = CAMERA_MOUSE_ROTATION_SPEED
 		if aiming:
 			camera_speed_this_frame *= 0.75
